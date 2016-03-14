@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+<head>
+  <meta charset="UTF-8">
+  <title>Angular JS Template</title>
+
+  <!-- Bootstrap Styling CSS -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+
+  <!-- jQuery DOM library, required by Bootstrap -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <!-- AngularJS -->
+  <script src="bower_components/angular/angular.js"></script>
+</head>
+<body>
+  <!-- Navigation bar from Bootstrap -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">AngularJS</a>
+      </div>
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <div class="container" ng-init="names=['Harsh', 'Bharath', 'Navaneeth']">
+    <h3>Using filters</h3>
+    <ul>
+      <li ng-repeat="name in names | orderBy:'name'"> {{name | uppercase}} </li>
+    </ul>
+  </div>
+
+  <!-- <div cass="container">
+    Name: <input type="text" ng-model="inputName" />
+  </div> -->
+
+  <!-- <div class="container" ng-init="people=['Harsh', 'Bharath', 'Navaneeth']">
+    <h3>Using filters</h3>
+    <ul>
+      <li ng-repeat="person in people | filter: inputName | orderBy: person"> {{person | uppercase}} </li>
+    </ul>
+  </div> -->
+
+</body>
+</html>
